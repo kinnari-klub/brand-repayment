@@ -55,27 +55,27 @@ const RoundSumBox = (props) => {
 
     return (
         <>
-            <div className="px-2 py-4 rounded-xl flex flex-col gap-y-3 items-baseline bg-white">
 
-                {/* Active Button */}
-                <div className={`inline-flex  rounded-2xl px-3 py-1 border 
+            <div className="max-w-sm lg:max-w-none">
+
+                <div className="px-2 py-4 rounded-xl flex flex-col gap-y-3 items-baseline bg-white">
+
+                    {/* Active Button */}
+                    <div className={`inline-flex  rounded-2xl px-3 py-1 border 
                 ${BorderRdBox}`}>
-                    <div className="uppercase text-xs font-medium">
-                        <span className={`${textColor}`}>
-                            {isActive}
-                        </span>
+                        <div className="uppercase text-xs font-medium">
+                            <span className={`${textColor}`}>
+                                {isActive}
+                            </span>
+                        </div>
                     </div>
-                </div>
 
-                {/*  */}
-                <div className="flex justify-between items-baseline w-full">
-
-
+                    {/*  */}
                     <div className="flex justify-between gap-y-6 items-center w-full flex-wrap">
 
                         {/* left-1 */}
                         {/*  */}
-                        <div className='w-45 flex flex-col'>
+                        <div className='w-48 flex flex-col'>
                             <div className="font-semibold">
                                 {`${props.RoundName} ${props.RoundNo}`}
                             </div>
@@ -106,7 +106,7 @@ const RoundSumBox = (props) => {
 
                         {/* left-2 */}
                         {/*  */}
-                        <div className={`w-45 flex flex-col ${isDisplay}`}>
+                        <div className={`w-48 flex flex-col ${isDisplay}`}>
 
                             <div className="font-semibold">
                                 <span>
@@ -165,18 +165,19 @@ const RoundSumBox = (props) => {
                                 </span>
                             </div>
 
-
+                            {/* Alert */}
                             <div className={`w-6 h-6 ${alIconBgColor} rounded-full flex justify-center items-center`}>
                                 <Image src="/lightning.svg" alt="" className="" width={20} height={20} />
                             </div>
+
                         </div>
 
                     </div>
+
+
                 </div>
 
             </div>
-
-
 
         </>
     )
